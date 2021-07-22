@@ -1,0 +1,51 @@
+<div class="container">
+	<h2>Proyectos</h2>
+
+	<ul> <!-- *ngFor="let project of projects"
+		[routerLink]="['/getProject', project._id]" -->
+		<li class="project">
+			<a href="https://github.com/joel1597/Portafolio-backend-nodejs" target="_blank">
+				<div class="image">
+					<!--<img src="{{url+'getImage/'+project.image}}" *ngIf="project.image" />-->
+					<img src="assets/img/imgportafolio.png" alt="">
+				</div>
+				<h3>Mi Porfatalio</h3>
+				<p>Conoceme</p>			
+			</a>				
+		</li>
+
+		<li class="project">
+			<a href="https://github.com/joel1597/api-laravel" target="_blank">
+				<div class="image">
+					<!--<img src="{{url+'getImage/'+project.image}}" *ngIf="project.image" />-->
+					<img src="assets/img/ngposts.png" alt="">
+				</div>
+				<h3>Aplicativo de Posts</h3>				
+				<p>laravel 7</p>			
+			</a>				
+		</li>
+
+		<li class="project">
+			<a href="https://github.com/joel1597/Foro-programacion" target="_blank">
+				<div class="image">
+					<!--<img src="{{url+'getImage/'+project.image}}" *ngIf="project.image" />-->
+					<img src="assets/img/foro.png" alt="">
+				</div>
+				<h3>Foro Web de Programacion</h3>
+				<p>Node Js - Express - Mongo DB - Angular</p>			
+			</a>				
+		</li>
+
+		<li class="project">
+			<a href="https://github.com/joel1597/carrito-web" target="_blank">
+				<div class="image">
+					<!--<img src="{{url+'getImage/'+project.image}}" *ngIf="project.image" />-->
+					<img src="assets/img/carrito.jpg" alt="">
+				</div>
+				<h3>Carrito</h3>
+				<p>PHP 7 - POO - MVC</p>		
+			</a>				
+		</li>
+
+	</ul>
+</div>

@@ -1,0 +1,70 @@
+<div class="container">
+	<h2>{{ title }}</h2>
+
+	<div class="container">
+
+		<div class="alert alert-success" role="alert" *ngIf="status=='success'">
+			El Proyecto se ha creado correctamente, puedes <a [routerLink]="['/getProject', save_projet._id]" >verlo aqui</a>
+		</div>
+
+		<div class="alert alert-danger" role="alert" *ngIf="status=='failed'">
+			No se ha podido crear el Proyecto
+		</div>
+
+		<form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+			<div class="row mb-3">
+				<label for="name" class="col-sm-2 col-form-label">Nombre</label>
+				<div class="col-sm-10">
+					<input type="text" name="name" class="form-control" #name="ngModel" [(ngModel)]="project.name" required />		
+				</div>
+				
+			</div>
+
+			<div class="row mb-3">
+				<label for="description" class="col-sm-2 col-form-label">Descripcion</label>
+				<div class="col-sm-10">
+					<textarea name="description" class="form-control" #description="ngModel" [(ngModel)]="project.description" required></textarea>					
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label for="category" class="col-sm-2 col-form-label">Categoria</label>
+				<div class="col-sm-10">
+					<input type="text" name="category" class="form-control" #category="ngModel" [(ngModel)]="project.category" required />					
+				</div>				
+			</div>
+
+			<div class="row mb-3">
+				<label for="year" class="col-sm-2 col-form-label">Año de lanzamiento</label>
+				<div class="col-sm-10">
+					<input type="number" class="form-control" name="year" #year="ngModel" [(ngModel)]="project.year" />
+				</div>		
+			</div>
+
+			<div class="row mb-3">
+				<label for="langs" class="col-sm-2 col-form-label">Lenguajes utilizados</label>
+				<div class="col-sm-10">
+					<input type="text" name="langs" class="form-control" #langs="ngModel" [(ngModel)]="project.langs" required />					
+				</div>		
+			</div>
+
+			<div class="row mb-3">
+				<label for="image" class="col-sm-2 col-form-label">Imagen del proyecto</label>
+
+				<span class="image" style="float: none;">
+					<img src="{{url+'getImage/'+project.image}}" *ngIf="project.image" style="width: 100px" />
+				</span><br/>
+
+				<div class="col-sm-10">
+					<input type="file" name="image" class="form-control" placeholder="Subir imagen" (change)="fileChangeEvent($event)" />
+				</div>			
+			</div>
+
+			<div class="d-grid gap-2 col-6 mx-auto">
+				<input type="submit" value="Registrar" id="btn_register" />
+			</div>
+
+		</form>
+	</div>
+
+</div>

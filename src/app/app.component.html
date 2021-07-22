@@ -1,0 +1,20 @@
+<header>
+  <nav>
+    <ul>
+      <li><a [routerLink]="['/about']" routerLinkActive="actived">Sobre mi</a></li>
+      <li><a [routerLink]="['/projects']" routerLinkActive="actived">Proyectos</a></li>
+      <li id="logo"><a href="#">JS</a></li>
+      <li><a [routerLink]="['/create']" routerLinkActive="actived">Crear Proyectos</a></li>
+      <!--<li><a [routerLink]="['/contact']" routerLinkActive="actived">Contacto</a></li>-->
+    </ul>
+  </nav>
+</header>
+
+<section id="content">
+  <router-outlet></router-outlet>  
+</section>
+
+<footer>
+  Luis Joel Sandoval Campos - Estudiante de la carrera de Desarrollo de Software
+</footer>
+
